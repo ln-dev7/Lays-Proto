@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&family=Plus+Jakarta+Sans:wght@500&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dd6b22f2;
+  overflow: hidden;
+}
+
+.clipPaths {
+  z-index: -1;
+  .clipPath {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.app-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  h2 {
+    width: 100%;
+    text-align: center;
+    line-height: 7rem;
+    color: #fff;
+    font-size: 7rem;
+  }
+  @media screen and (max-width: 1180px) {
+    display: flex;
+  }
+}
+
+.app-desktop {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  @media screen and (max-width: 1180px) {
+    display: none;
+  }
+}
+
+.main {
+  position: relative;
+  //overflow: hidden;
+  width: 1280px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+
+  .images {
+    width: 100%;
+    height: 650px;
+    left: 100px;
+    position: relative;
+    &-container {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      position: absolute;
+      z-index: 3;
+    }
+    .image-1 {
+      width: 200px;
+      top: -100px;
+      left: -80px;
+      transform: rotate(-28deg);
+    }
+    .image-2 {
+      width: 500px;
+      top: -50px;
+      left: 200px;
+      transform: rotate(10deg);
+    }
+    .image-3 {
+      width: 200px;
+      top: 500px;
+      left: -80px;
+      transform: rotate(110deg);
+    }
+  }
+
+  .tools {
+    width: 100%;
+    height: 650px;
+    left: 100px;
+    position: relative;
+    &-container {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      position: absolute;
+      z-index: 3;
+    }
+    .tool-1 {
+      width: 600px;
+      top: -100px;
+      right: -80px;
+      scale: 0;
+      opacity: 0;
+    }
+    .tool-2 {
+      width: 500px;
+      top: -50px;
+      left: 200px;
+      scale: 1;
+      opacity: 1;
+    }
+    .tool-3 {
+      width: 400px;
+      top: 500px;
+      right: -80px;
+      scale: 0;
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 50rem;
+    color: #ab5115;
+    padding-top: 5rem;
+    -webkit-text-stroke: 2px #fff;
+    transition: color 0.5s ease;
+    z-index: 10;
+    mix-blend-mode: hard-light;
+  }
+}
+
+.navigation {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #ab5115;
+    color: #ab5115;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.copyright {
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    color: #fff;
+  }
+  a {
+    display: block;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin: 0 4px;
+    &:hover {
+      text-underline-offset: -4px;
+    }
+  }
+}
